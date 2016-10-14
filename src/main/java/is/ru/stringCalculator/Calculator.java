@@ -21,7 +21,11 @@ public class Calculator{
 	
 	private static int sum(String[] numbers){
 		int total = 0;
+		
 		for (String number : numbers){
+			if (toInt(number) < 0){
+				StdOut.println("Negatives not allowed: " + toInt(number));
+			}
 			total += toInt(number);
 		}
 		return total;

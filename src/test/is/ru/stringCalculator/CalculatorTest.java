@@ -28,5 +28,9 @@ public class CalculatorTest{
 	public void testSplitNewLine(){
 		assertEquals(6, Calculator.add("3\n3"));
 	}
+	@Test
+	public void testNegatineNumber(){
+		assertEquals("Negatives not allowed: -1", Calculator.add("1\n-1"));
+	}
 	
 }
